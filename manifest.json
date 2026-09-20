@@ -3,26 +3,56 @@
   "name": "MyBlock",
   "version": "0.1.0",
   "description": "My own ad blocker, modeled on uBlock Origin.",
-  "permissions": ["declarativeNetRequest", "storage", "activeTab"],
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "activeTab"
+  ],
   "declarative_net_request": {
     "rule_resources": [
-      { "id": "main", "enabled": true, "path": "rules/rules.json" }
+      {
+        "id": "main",
+        "enabled": true,
+        "path": "rules/rules.json"
+      }
     ]
   },
-  "action": { "default_popup": "popup/popup.html", "default_title": "MyBlock" },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "MyBlock",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
   "background": {
     "service_worker": "background.js",
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_start",
       "all_frames": true
     }
   ],
   "browser_specific_settings": {
-    "gecko": { "id": "myblock@example.com" }
+    "gecko": {
+      "id": "myblock@example.com"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }

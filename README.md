@@ -2,6 +2,8 @@
 
 A lightweight ad blocker browser extension built from scratch as a learning project, modeled on the architecture of uBlock Origin. Works on Chrome, Brave, Edge and Firefox-based browsers (Zen).
 
+![MyBlock popup](docs/screenshot.png)
+
 ## Features
 
 - **Network blocking**: stops requests to ad and tracker domains before they load (Manifest V3 declarativeNetRequest).
