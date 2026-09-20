@@ -1,0 +1,16 @@
+! Starter filter list (Adblock Plus syntax, same family as EasyList).
+! Only network rules of the form ||domain^ are supported by convert.js for now.
+||doubleclick.net^
+||googlesyndication.com^
+||googleadservices.com^
+||google-analytics.com^
+||adservice.google.com^
+||googletagservices.com^
+||adnxs.com^
+||taboola.com^
+||outbrain.com^
+||criteo.com^
+||pubmatic.com^
+||rubiconproject.com^
+||amazon-adsystem.com^
+||facebook.net^$third-party
