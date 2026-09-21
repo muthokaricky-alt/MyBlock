@@ -1,44 +1,70 @@
 const api = typeof browser !== "undefined" ? browser : chrome;
-const hostEl = document.getElementById("host");
-const btn = document.getElementById("toggle");
-const statusEl = document.getElementById("status");
+const $ = (id) => document.getElementById(id);
 
+let tab = null;
 let host = null;
 let allowlist = [];
+let enabled = true;
+
+const rebuild = () => api.runtime.sendMessage({ type: "rebuild" }); // resolves once rules are updated
 
 function render() {
-  const paused = allowlist.includes(host);
-  btn.textContent = paused ? "Resume blocking" : "Pause on this site";
-  btn.classList.toggle("paused", paused);
-  statusEl.textContent = paused ? "Blocking is OFF here." : "Blocking is ON here.";
+  const paused = !!host && allowlist.includes(host);
+  $("power").checked = enabled;
+  $("pause").textContent = paused ? "Resume blocking" : "Pause on this site";
+  $("pause").classList.toggle("paused", paused);
+  $("pause").disabled = !host || !enabled;
+  $("pick").disabled = !host || !enabled || paused;
+  $("status").textContent = !enabled ? "MyBlock is OFF everywhere."
+    : paused ? "Paused on this site."
+    : "Blocking is ON here.";
+}
+
+async function showStats() {
+  try {
+    // Needs activeTab, which the browser grants when the popup is opened. Counts rule matches on this tab.
+    const res = await api.declarativeNetRequest.getMatchedRules({ tabId: tab.id });
+    const n = res.rulesMatchedInfo.filter((m) => !(m.rule.rulesetId === "_dynamic" && m.rule.ruleId <= allowlist.length)).length;
+    $("stats").textContent = "Blocked on this page: " + n;
+  } catch {
+    $("stats").textContent = ""; // not supported in this browser
+  }
 }
 
 async function init() {
-  const [tab] = await api.tabs.query({ active: true, currentWindow: true });
-  try {
-    host = new URL(tab.url).hostname;
-  } catch {
-    host = null;
-  }
-  if (!host) {
-    hostEl.textContent = "Not available on this page";
-    btn.disabled = true;
-    return;
-  }
-  hostEl.textContent = host;
-  ({ allowlist = [] } = await api.storage.local.get("allowlist"));
+  [tab] = await api.tabs.query({ active: true, currentWindow: true });
+  try { host = new URL(tab.url).hostname; } catch { host = null; }
+  ({ allowlist = [], enabled = true } = await api.storage.local.get(["allowlist", "enabled"]));
+  $("host").textContent = host || "Not available on this page";
   render();
+  if (host) showStats();
 }
 
-btn.addEventListener("click", async () => {
-  allowlist = allowlist.includes(host)
-    ? allowlist.filter((h) => h !== host)
-    : [...allowlist, host];
-  await api.storage.local.set({ allowlist });
-  await api.runtime.sendMessage("allowlist-changed");
+$("power").addEventListener("change", async (e) => {
+  enabled = e.target.checked;
+  await api.storage.local.set({ enabled });
+  await rebuild();
   render();
-  const [tab] = await api.tabs.query({ active: true, currentWindow: true });
-  api.tabs.reload(tab.id); // reload so the change takes effect
+  if (tab) api.tabs.reload(tab.id);
 });
+
+$("pause").addEventListener("click", async () => {
+  allowlist = allowlist.includes(host) ? allowlist.filter((h) => h !== host) : [...allowlist, host];
+  await api.storage.local.set({ allowlist });
+  await rebuild();
+  render();
+  api.tabs.reload(tab.id);
+});
+
+$("pick").addEventListener("click", async () => {
+  try {
+    await api.tabs.sendMessage(tab.id, { type: "start-picker" });
+    window.close();
+  } catch {
+    $("status").textContent = "Reload the page first, then try again.";
+  }
+});
+
+$("settings").addEventListener("click", () => { api.runtime.openOptionsPage(); window.close(); });
 
 init();

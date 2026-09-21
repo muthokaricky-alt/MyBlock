@@ -1,16 +1,97 @@
-! Starter filter list (Adblock Plus syntax, same family as EasyList).
-! Only network rules of the form ||domain^ are supported by convert.js for now.
+! ==========================================================
+! MyBlock starter filters (Adblock Plus syntax)
+! Edit this file, then run:  node tools/convert.js
+! ==========================================================
+
+! ---- Ad networks ----
 ||doubleclick.net^
 ||googlesyndication.com^
 ||googleadservices.com^
-||google-analytics.com^
 ||adservice.google.com^
 ||googletagservices.com^
+||2mdn.net^
 ||adnxs.com^
 ||taboola.com^
 ||outbrain.com^
 ||criteo.com^
+||criteo.net^
 ||pubmatic.com^
 ||rubiconproject.com^
 ||amazon-adsystem.com^
-||facebook.net^$third-party
+||openx.net^
+||casalemedia.com^
+||smartadserver.com^
+||adsrvr.org^
+||advertising.com^
+||adform.net^
+||moatads.com^
+||adsafeprotected.com^
+||doubleverify.com^
+||zedo.com^
+||revcontent.com^
+||mgid.com^
+||teads.tv^
+||media.net^
+||contextweb.com^
+||lijit.com^
+||sovrn.com^
+||yieldmo.com^
+||triplelift.com^
+||gumgum.com^
+||sharethrough.com^
+||33across.com^
+||bidswitch.net^
+||conversantmedia.com^
+||adroll.com^
+||serving-sys.com^
+||smaato.net^
+||inmobi.com^
+||applovin.com^
+||ads-twitter.com^
+||ads.tiktok.com^
+||ads.linkedin.com^
+
+! ---- Pop-up / aggressive ad networks ----
+||popads.net^
+||propellerads.com^
+||adsterra.com^
+||exoclick.com^
+||juicyads.com^
+||trafficjunky.net^
+||clickadu.com^
+||hilltopads.com^
+
+! ---- Trackers ----
+||google-analytics.com^
+||scorecardresearch.com^
+||quantserve.com^
+||bluekai.com^
+||demdex.net^
+||krxd.net^
+||rlcdn.com^
+||everesttech.net^
+||analytics.tiktok.com^
+||mc.yandex.ru^
+||connect.facebook.net^$third-party
+
+! ---- Path and option examples ----
+/adsbygoogle.js$script
+||googlesyndication.com/pagead/^$important
+
+! ---- Exception example (uncomment to allow something) ----
+! @@||example.com/ads/allowed.js$script
+
+! ---- Cosmetic filters: hide leftover ad boxes ----
+##ins.adsbygoogle
+##[id^="google_ads"]
+##[id^="div-gpt-ad"]
+##iframe[src*="doubleclick.net"]
+##.ad-banner
+##.ad-container
+##.advert
+##[aria-label="Advertisement"]
+
+! ---- Site-specific cosmetic filters ----
+youtube.com###masthead-ad
+youtube.com##ytd-ad-slot-renderer
+youtube.com##ytd-display-ad-renderer

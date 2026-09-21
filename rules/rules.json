@@ -1,171 +1,69 @@
 [
-  {
-    "id": 1,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "doubleclick.net"
-      ]
-    }
-  },
-  {
-    "id": 2,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "googlesyndication.com"
-      ]
-    }
-  },
-  {
-    "id": 3,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "googleadservices.com"
-      ]
-    }
-  },
-  {
-    "id": 4,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "google-analytics.com"
-      ]
-    }
-  },
-  {
-    "id": 5,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "adservice.google.com"
-      ]
-    }
-  },
-  {
-    "id": 6,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "googletagservices.com"
-      ]
-    }
-  },
-  {
-    "id": 7,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "adnxs.com"
-      ]
-    }
-  },
-  {
-    "id": 8,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "taboola.com"
-      ]
-    }
-  },
-  {
-    "id": 9,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "outbrain.com"
-      ]
-    }
-  },
-  {
-    "id": 10,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "criteo.com"
-      ]
-    }
-  },
-  {
-    "id": 11,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "pubmatic.com"
-      ]
-    }
-  },
-  {
-    "id": 12,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "rubiconproject.com"
-      ]
-    }
-  },
-  {
-    "id": 13,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "amazon-adsystem.com"
-      ]
-    }
-  },
-  {
-    "id": 14,
-    "priority": 1,
-    "action": {
-      "type": "block"
-    },
-    "condition": {
-      "requestDomains": [
-        "facebook.net"
-      ],
-      "domainType": "thirdParty"
-    }
-  }
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["doubleclick.net"]},"id":1},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["googlesyndication.com"]},"id":2},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["googleadservices.com"]},"id":3},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["adservice.google.com"]},"id":4},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["googletagservices.com"]},"id":5},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["2mdn.net"]},"id":6},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["adnxs.com"]},"id":7},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["taboola.com"]},"id":8},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["outbrain.com"]},"id":9},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["criteo.com"]},"id":10},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["criteo.net"]},"id":11},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["pubmatic.com"]},"id":12},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["rubiconproject.com"]},"id":13},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["amazon-adsystem.com"]},"id":14},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["openx.net"]},"id":15},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["casalemedia.com"]},"id":16},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["smartadserver.com"]},"id":17},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["adsrvr.org"]},"id":18},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["advertising.com"]},"id":19},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["adform.net"]},"id":20},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["moatads.com"]},"id":21},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["adsafeprotected.com"]},"id":22},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["doubleverify.com"]},"id":23},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["zedo.com"]},"id":24},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["revcontent.com"]},"id":25},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["mgid.com"]},"id":26},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["teads.tv"]},"id":27},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["media.net"]},"id":28},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["contextweb.com"]},"id":29},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["lijit.com"]},"id":30},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["sovrn.com"]},"id":31},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["yieldmo.com"]},"id":32},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["triplelift.com"]},"id":33},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["gumgum.com"]},"id":34},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["sharethrough.com"]},"id":35},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["33across.com"]},"id":36},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["bidswitch.net"]},"id":37},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["conversantmedia.com"]},"id":38},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["adroll.com"]},"id":39},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["serving-sys.com"]},"id":40},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["smaato.net"]},"id":41},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["inmobi.com"]},"id":42},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["applovin.com"]},"id":43},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["ads-twitter.com"]},"id":44},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["ads.tiktok.com"]},"id":45},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["ads.linkedin.com"]},"id":46},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["popads.net"]},"id":47},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["propellerads.com"]},"id":48},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["adsterra.com"]},"id":49},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["exoclick.com"]},"id":50},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["juicyads.com"]},"id":51},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["trafficjunky.net"]},"id":52},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["clickadu.com"]},"id":53},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["hilltopads.com"]},"id":54},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["google-analytics.com"]},"id":55},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["scorecardresearch.com"]},"id":56},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["quantserve.com"]},"id":57},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["bluekai.com"]},"id":58},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["demdex.net"]},"id":59},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["krxd.net"]},"id":60},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["rlcdn.com"]},"id":61},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["everesttech.net"]},"id":62},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["analytics.tiktok.com"]},"id":63},
+{"priority":1,"action":{"type":"block"},"condition":{"requestDomains":["mc.yandex.ru"]},"id":64},
+{"priority":1,"action":{"type":"block"},"condition":{"domainType":"thirdParty","requestDomains":["connect.facebook.net"]},"id":65},
+{"priority":1,"action":{"type":"block"},"condition":{"resourceTypes":["script"],"urlFilter":"/adsbygoogle.js"},"id":66},
+{"priority":3,"action":{"type":"block"},"condition":{"urlFilter":"||googlesyndication.com/pagead/^"},"id":67}
 ]
